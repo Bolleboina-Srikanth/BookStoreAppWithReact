@@ -1,0 +1,110 @@
+.full-screen{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: #adadad;
+    justify-content: center;
+    align-items: center;
+}
+.parent-container{
+    display: flex;
+    flex-direction: row;
+    border: 0px solid;
+    width: 60%;
+    height: 80%;
+    justify-content: center;
+}
+ .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   /* // border: 1px solid; */
+    box-shadow:  0 0 20px rgba(0,0,0,0.5); 
+    border-radius: 0.5em;
+    width: 80%;
+    height:100%;
+    background-color: whitesmoke;
+      position: relative;
+      right: 10px; 
+      justify-content: space-around;
+}
+.image{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 50%;
+    border-radius: 1em;
+}
+#imageId{
+     width: 25vw;
+    height: 68vh; 
+    /* border: 1px solid; */
+    border-radius: 1em;
+    
+}
+#heading{
+    width: 100%;
+    position: relative;
+    bottom: 20px;
+    font-weight: bold;
+    height: 6vw;
+    background-color: whitesmoke;
+    border: opx solid;
+    border-radius: 1em;
+}
+.SigninSignUp{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    justify-content: space-around;
+    margin-top: 5px;
+     font-size: 22px; 
+    /* font: normal normal medium 25px/33px Roboto; */
+    
+} 
+#signup{
+      text-decoration: none;
+      color: black;
+      justify-content: space-between;
+}
+#signin{
+    color: #878787;
+    text-decoration: none;
+}
+.box{
+    width: 80%;
+    margin-bottom: 5px;
+}
+.names{
+    display: flex;
+    width: 28vw;
+    margin-top: 10px;
+}
+#button{
+
+    background-color: maroon;
+    color: whitesmoke;
+    width: 28vw;
+    height: 9vh;
+    justify-content: space-around;
+    margin-top: 13px;
+} 
+.buttonclass{
+     display: flex;
+     width: 28vw;
+     height: 14vh;
+    justify-content: space-around;
+
+
+}
+
+
+
+    @media (min-width:400px) and (max-width:700px)
+    {
+      .image{
+        display: none;
+      }
+    }
