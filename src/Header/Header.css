@@ -1,0 +1,43 @@
+.appbar{
+   background: #A03037;
+}
+#image{
+    top: 19px;
+left: 164px;
+width: 31px;
+height: 24px;
+margin-left: 130px;
+}
+.text{
+    top: 17px;
+    left: 201px;
+    width: 120px;
+    height: 26px;
+    /* UI Properties */
+    text-align: left;
+    font: normal normal normal 20px/26px Roboto;
+    letter-spacing: 0px;
+    color: whitesmoke;
+    text-transform: capitalize;
+    opacity: 1;
+}
+.search{
+    width: 30px;
+    background-color: red;
+
+}
+.details{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+width: 250px ;
+height: 50px;
+}
+.profile{
+     
+font: normal normal normal 10px/13px Roboto;
+margin-top: 0px;
+}
+.cart1{
+ margin-right: 30px;
+}

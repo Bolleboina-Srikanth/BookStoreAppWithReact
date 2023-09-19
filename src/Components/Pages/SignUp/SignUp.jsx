@@ -9,17 +9,17 @@ class SignUp extends Component {
         return (
             <div className="full-screen">
                 <div className="parent-container">
-                    <div className="image">
-                        <div>
+                    {/* <div className="image"> */}
+                        <div className="signupimage">
                         <img id="imageId" src={storeimage}  alt="fundoo" />
                         </div>
                         {/* <div id="heading">
                             <p>ONLINE BOOK SHOPPING</p>
                         </div> */}
-                    </div>
+                    {/* </div> */}
                     <form className="container">
                         <div className="SigninSignUp">
-                            <div ><Link id="signin">LOGIN</Link></div>
+                            <div ><Link id="signin"   to="/">LOGIN</Link></div>
                             <div><Link id="signup">SIGNUP</Link></div>
                         </div>
                         

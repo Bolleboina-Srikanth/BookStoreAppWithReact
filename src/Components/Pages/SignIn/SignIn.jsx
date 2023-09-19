@@ -9,18 +9,18 @@ class SignIn extends Component {
         return (
             <div className="full-screen">
                 <div className="parent-container">
-                    <div className="image">
-                        <div>
+                    
+                        <div className="signinimage">
                             <img id="imageId" src={storeimage} alt="fundoo" />
                         </div>
                         {/* <div id="heading">
                             <p>ONLINE BOOK SHOPPING</p>
                         </div> */}
-                    </div>
+                    
                     <form className="container">
                         <div className="SigninSignUp">
                             <div ><Link id="signinid">LOGIN</Link></div>
-                            <div><Link id="signupid">SIGNUP</Link></div>
+                            <div><Link id="signupid" to='/signup'>SIGNUP</Link></div>
                         </div>
 
                         <label className="names" for="email">Email id</label>

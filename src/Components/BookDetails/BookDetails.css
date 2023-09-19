@@ -1,0 +1,193 @@
+.bookFullScreen{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bookParentContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* border: 0px solid black; */
+    width: 75%;
+    height: 90%;
+}
+/* ---------------------------------------------------------------------- */
+.bookchild1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     border: 0px solid orange; 
+    width: 5%;
+    height: 100%;
+}
+.bookimg2{
+    margin-top: 5px;
+left: 179px;
+width: 40px;
+height: 45px;
+}
+.imgborder{
+    width: 100%;
+    
+    border: 1px solid gray;
+}
+/* -------------------------------------------------------------------------------- */
+
+.bookchild2{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    width: 39%;
+    height: 100%;
+
+}
+.child2bookimg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid gray;
+    border-radius: 0.2em;
+    width: 100%;
+    height: 67vh;
+}
+#hild2bookimg{
+    width: 450px;
+    height: 60vh;
+}
+/* --------------------------------------------------------------- */
+.bookchild3{
+    display: flex;
+    flex-direction: column;
+    border: 0px solid blue;
+    width: 59%;
+    height: 100%;
+}
+
+.bookchild3details{
+    width: 90%;
+    height: 26vh;
+    border: 0px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 0px 0px 30px ;
+    margin-top: 0px;
+}
+.dont{
+    font-size: 2.5vw;
+        margin-top: 0px;
+}
+.bysteve{
+/* margin:0px 50px 0px 0px; */
+margin-top: -50px;
+}
+.rupees{
+margin-top: 20px;
+}
+#fifteen{
+    font-weight: bold;
+    font-size: 20px;
+}
+.dontmakemebookdetails{
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    border: 0px solid;
+    padding: 0px 0px 0px 30px ;
+    text-align: left;
+}
+.booktext{
+    margin-top: 0px;
+    text-align: left;
+font: normal normal normal 12px/16px Roboto;
+letter-spacing: 0px;
+color: #707070;
+opacity: 1;
+}
+.bookdetailscolor{
+    color: gray;
+}
+.horizontalline{
+    color: #A03037;
+}
+.cfb{
+    font-weight: bold;
+}
+.overallreview{
+    width: 38vw;
+    background-color: #f9f9f9;
+    height: 30vh;
+}
+#fivestars{
+    /* color: white;
+    background-color: gray */
+
+}
+#inputtype{
+    width: 38vw;
+    background-color: whitesmoke;
+    height: 10vh;
+     border: none; 
+}
+
+
+.customerfeedback{
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    border: 0px solid;
+    padding: 0px 0px 0px 30px ;
+    text-align: left;
+}
+.fbsubmit{
+    display: flex;
+    justify-content: right;
+    width: 38vw;
+}
+.bookreviews{
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    border: 0px solid;
+    padding: 0px 0px 0px 30px ;
+    text-align: left;
+}
+.textcolor{
+    text-align: left;
+font: normal normal normal 12px/16px Roboto;
+letter-spacing: 0px;
+color: #707070;
+opacity: 1;
+}
+.avataricon{
+    display: flex;
+    flex-direction: row;
+}
+.iconsize{
+    width: 15px;
+    height: 23px;
+}
+/* ------------------------------------------------------------ */
+.bookbuttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* justify-content: space-around; */
+    align-items: center;
+    width: 100%;
+    height: 15vh;
+}
+#addtobag{
+   background: #A03037;
+   width: 180px;
+   height: 45px;
+}
+#bookwhishlist{
+    background-color: black;
+    width: 180px;
+    height: 45px;
+}

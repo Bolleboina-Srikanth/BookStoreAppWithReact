@@ -7,6 +7,11 @@
     margin-bottom: 8px;
 
 }
+.signinimage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 #fpwd{
     text-align: right;
     width: 80%;
