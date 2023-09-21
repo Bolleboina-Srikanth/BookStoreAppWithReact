@@ -1,0 +1,32 @@
+.orderplacedfullscreen{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    
+}
+.o-parentcontainer{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 90%;
+    border: 0px solid;
+    justify-content: space-between;
+}
+#orderimage{
+    width: 260px;
+    height: 260px;
+}
+table{
+    
+    border: 0px solid;
+}
+.table{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* th {
+    border: none; 
+} */

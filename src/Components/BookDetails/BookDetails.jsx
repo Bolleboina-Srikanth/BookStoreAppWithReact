@@ -6,11 +6,18 @@ import Button from '@mui/material/Button';
 import StarIcon from '@mui/icons-material/StarBorderPurple500Outlined';
 import Avatar from '@mui/material/Avatar';
 import Rating from '@mui/material/Rating';
+import { useNavigate } from "react-router-dom";
 
 function DisplayBook() {
+    const navigate= useNavigate();
+    const handlecart=()=>{
+        navigate("/cart");
+    }
     return (
         <div className="bookFullScreen">
+            <div className="homebook">Home/ Book</div>
             <div className="bookParentContainer">
+                
                 <div className="bookchild1">
                     <div className="imgborder" >
                         <img className="bookimg2" src={image2}></img>
@@ -22,7 +29,7 @@ function DisplayBook() {
 
                     <div className="bookbuttons">
                         <div>
-                            <Button id="addtobag" variant="contained">ADD TO BAG</Button>
+                            <Button onClick={handlecart} id="addtobag" variant="contained">ADD TO BAG</Button>
                         </div>
                         <div>
                             <Button id="bookwhishlist" variant="contained">&#9829; WISHLIST</Button>

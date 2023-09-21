@@ -6,10 +6,20 @@ import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
 import img1 from '../Images/Image 1.png';
 import '../Books/Books.css';
+import { useNavigate } from 'react-router-dom';
+
+
+
+
+
 
 export default function BookCard() {
+    const navigate =useNavigate();
+    const handleBook=()=>{
+        navigate("/displaybook");
+     }
     return (
-        <Card sx={{
+        <Card  onClick={handleBook}  sx={{
             maxWidth: 230,
             marginTop: 3,
             marginLeft: 5,

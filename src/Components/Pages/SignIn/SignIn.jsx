@@ -1,11 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import { Link } from "@mui/material";
+import { Link } from "react-router-dom";
 import './SignIn.css';
 import storeimage from '../../Images/storeimage2.png';
-class SignIn extends Component {
-    render() {
+function SignIn (){
+    
         return (
             <div className="full-screen">
                 <div className="parent-container">
@@ -19,7 +19,7 @@ class SignIn extends Component {
                     
                     <form className="container">
                         <div className="SigninSignUp">
-                            <div ><Link id="signinid">LOGIN</Link></div>
+                            <div ><Link id="signinid" to='/'>LOGIN</Link></div>
                             <div><Link id="signupid" to='/signup'>SIGNUP</Link></div>
                         </div>
 
@@ -33,7 +33,7 @@ class SignIn extends Component {
 
 
                         <div className="buttonclass">
-                            <Button id="button" variant="contained">login</Button>
+                            <Button id="button" variant="contained"><Link to='/bookcard'>login</Link></Button>
                         </div>
                         <p>---------- OR  ----------</p>
                         <div className="fg">
@@ -44,6 +44,6 @@ class SignIn extends Component {
                 </div>
             </div>
         )
-    }
+    
 }
 export default SignIn;

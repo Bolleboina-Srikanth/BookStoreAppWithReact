@@ -225,16 +225,17 @@ export default function HeaderBar() {
                                     <  AccountIcon className='' ></AccountIcon>
                                     <p className='profile' >Profile</p>
                                 </div>
-                                <div className='cart1'>
+                                
+                            </div>
+                            
+
+                        </IconButton>
+                       
+                    </Box>
+                    <div className='cart1'>
                                     < CartIcon></CartIcon>
                                     <p className='profile'>cart</p>
                                 </div>
-                            </div>
-
-                        </IconButton>
-
-
-                    </Box>
                     {/* <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
                         <IconButton
                             size="large"
