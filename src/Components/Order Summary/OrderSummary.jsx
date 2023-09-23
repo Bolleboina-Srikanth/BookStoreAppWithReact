@@ -1,9 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import './OrderSummary.css';
 import image2 from '../Images/Image2.png';
 import Button from '@mui/material/Button';
+import { useNavigate } from "react-router-dom";
 
 function OrderSummary() {
+
+    const[order,setOrder] =useState(false)
+  const navigate=useNavigate();
+    const handleorder=()=>{
+        setOrder(true)
+    }
+    if(order == true)
+    {
+        navigate("/orderplaced");
+    }
+
     return (
         <div className="ordersummaryfullscreen">
             <div className="ordersummarycontainer">
@@ -29,7 +41,7 @@ function OrderSummary() {
 
                 </div>
                 <div className="summarycheckoutbutton">
-                <Button id="placeorderbutton" variant="contained">chekout</Button>
+                <Button onClick={handleorder} id="placeorderbutton" variant="contained">chekout</Button>
                 </div>
             </div>
 

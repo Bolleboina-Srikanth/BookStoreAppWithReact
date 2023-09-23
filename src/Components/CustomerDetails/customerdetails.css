@@ -1,12 +1,12 @@
 .cdfullscreen{
     width: 100vw;
-    height: 91vh;
+    height: 80vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;
+    align-items: center; */
   }
   .cdparentcontainer {
-    width: 66%;
+    width: 60%;
     border: 1px solid #e4d6d6;
     border-radius: 2px;
     margin-right: 545px;

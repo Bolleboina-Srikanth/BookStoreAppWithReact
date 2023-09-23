@@ -9,17 +9,20 @@ import RectangleIcon from '@mui/icons-material/RectangleOutlined';
 import CheckBoxOutIcon from '@mui/icons-material/CheckBoxOutlineBlankOutlined';
 import Button from '@mui/material/Button';
 import CustomerDetails from "../CustomerDetails/customerdetails";
+import OrderSummary from "../Order Summary/OrderSummary";
 
 
 function BookCart() {
   const [custDetails, setCustDetails] = useState(false)
-
-
-
   const handleorder = () => {
     setCustDetails(!custDetails);
   }
+  const [summary, setSummary] = useState(false)
 
+  function CallingOrderSummary(add) {
+    setSummary(add);
+
+  }
 
 
   return (
@@ -70,17 +73,18 @@ function BookCart() {
 
         </div>
 
-        {custDetails ? <CustomerDetails /> :
+        {custDetails ? <CustomerDetails call={CallingOrderSummary} /> :
           <div className="addressDetails">
             {
               <p id="addressstyle">   Address Details</p>
             }
           </div>
         }
-
-        <div className="orderdetails">
-          <p id="addressstyle">Order Summary</p>
-        </div>
+        {  summary ? <OrderSummary/> :
+          <div className="orderdetails">
+            <p id="addressstyle">Order Summary</p>
+          </div>
+        }
       </div>
 
     </div>

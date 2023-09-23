@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import './orderplaced.css';
 import orderimage from '../Images/orderplacedimage.png';
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 function OrderPlaced() {
+    const[order,setOrder] =useState(false)
+    const navigate=useNavigate();
+      const handlehome=()=>{
+          setOrder(true)
+      }
+      if(order == true)
+      {
+          navigate("/bookcard");
+      }
+    
+
     return (
         <div className="orderplacedfullscreen">
             <div className="o-parentcontainer">
@@ -29,7 +41,7 @@ function OrderPlaced() {
                     </table>
                 </div>
                 <div>
-                <button className="cd-submit-button" type="submit">CONTINUE SHOPPING</button>
+                <button onClick={handlehome} className="cd-submit-button" type="submit">CONTINUE SHOPPING</button>
                 </div>
             </div>
 

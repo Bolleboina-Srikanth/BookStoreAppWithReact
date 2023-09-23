@@ -1,10 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './customerdetails.css';
 import TextField from '@mui/material/TextField';
 import Radio from '@mui/material/Radio';
 import FormControlLabel from '@mui/material/FormControlLabel';
+import OrderSummary from '../Order Summary/OrderSummary';
 
-function CustomerDetails() {
+function CustomerDetails({call}) {
+    const [summary, setSummary] = useState(false)
+
+    const handlesummary = () => {
+        setSummary(true)
+        call(summary);
+    }
+    
+    
     return (
         <div className="cdfullscreen">
             <div className="cdparentcontainer">
@@ -51,10 +60,14 @@ function CustomerDetails() {
                             <FormControlLabel value="end" control={<Radio />} label="Other" />
                         </div>
                     </div>
+                    
+                    
+                        {/* { summary ? <OrderSummary/> : */}
+                            <div className="cd-box-6 cd-box">
+                                <button onClick={handlesummary} className="cd-submit-button" type="submit">CONTINUE</button>
+                            </div>
 
-                    <div className="cd-box-6 cd-box">
-                        <button className="cd-submit-button" type="submit">CONTINUE</button>
-                    </div>
+                    
                 </div>
             </div>
         </div>

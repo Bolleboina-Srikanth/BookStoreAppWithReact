@@ -23,7 +23,7 @@ function Dashboard()
              <CustomerDetails/>
             <OrderPlaced/> */}
               {/* <DisplayBook/> */}
-              <BookCart/>
+              {/* <BookCart/> */}
         </div>
     )
 }
