@@ -1,0 +1,17 @@
+.increament{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 45px;
+}
+
+.countborder{
+    width: 2vw; 
+    height: 3vh;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 1px solid #DBDBDB;
+border-radius: 2px;
+opacity: 1;
+}

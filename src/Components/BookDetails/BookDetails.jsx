@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import './BookDetails.css';
 import image2 from '../Images/Image2.png';
 import image3 from '../Images/Image2.1.png';
@@ -7,12 +7,20 @@ import StarIcon from '@mui/icons-material/StarBorderPurple500Outlined';
 import Avatar from '@mui/material/Avatar';
 import Rating from '@mui/material/Rating';
 import { useNavigate } from "react-router-dom";
+import IncreamentBooks from "../AddToCart/increamentItems";
 
-function DisplayBook() {
+function DisplayBook() {  
     const navigate= useNavigate();
+    const[add,setAdd]= useState(false)
     const handlecart=()=>{
-        navigate("/cart");
+    setAdd(true);
+
+       // navigate("/cart");
     }
+
+    //const { book } = location.Details;
+    
+
     return (
         <div className="bookFullScreen">
             <div className="homebook">Home/ Book</div>
@@ -28,9 +36,13 @@ function DisplayBook() {
                     <div className="child2bookimg" > <img id="hild2bookimg" src={image2}></img></div>
 
                     <div className="bookbuttons">
+
+                        { add ? <IncreamentBooks/> : 
                         <div>
                             <Button onClick={handlecart} id="addtobag" variant="contained">ADD TO BAG</Button>
                         </div>
+                        }
+
                         <div>
                             <Button id="bookwhishlist" variant="contained">&#9829; WISHLIST</Button>
                         </div>
@@ -46,10 +58,10 @@ function DisplayBook() {
 
                     <div className='bookchild3details'>
                         <div>
-                            <p className="dont">Don't Make Me Think</p>
+                            <p className="dont">dont make think</p>
                         </div>
                         <div className="bysteve">
-                            <p >  by Steve krug</p>
+                            <p >by steve</p>
                         </div>
                         <div            >
                             <span className='star'>4.5 &#9733;</span>

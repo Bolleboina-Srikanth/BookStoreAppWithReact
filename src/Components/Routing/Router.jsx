@@ -9,7 +9,9 @@ import DisplayBook from "../BookDetails/BookDetails";
 import BookCart from "../Cart/BookCart";
 import OrderPlaced from "../orderplaced/orderplaced";
 import CustomerDetails from '../CustomerDetails/customerdetails'
-
+import AuthRoute from "./AuthRoute";
+import Pwd from "../Pages/Forgotpassword/fpwd";
+import BOOKDETAILS from '../BookDetails/BookDetails';
 
 export default function BookStoreRouter() {
     return (
@@ -18,14 +20,16 @@ export default function BookStoreRouter() {
             <BrowserRouter>
                 <AppbarStatic>
                     <Routes>
-                        <Route exact path={"/"} element={<SIGNIN />} />
+                        <Route exact path={"/"} element={<AuthRoute><SIGNIN /></AuthRoute>} />
                         <Route path={"/signup"} element={<SIGNUP />} />
-                        {/* <Route  path={"/dashboard"} element={<DASHBOARD/>}/> */}
-                        <Route path={"/bookcard"} element={<BOOKCARD />} />
-                        <Route path={'/displaybook'} element={<DisplayBook />}></Route>
+                        {/* <Route path={"/bookcard"} element={<BOOKCARD />} /> */}
+                        <Route path={'/bookdetails'} element={<DisplayBook />}></Route>
                         <Route path="/cart" element={<BookCart />}></Route>
                         <Route path={"/customerdetails"} element={<CustomerDetails />}></Route>
                         <Route path={'/orderplaced'} element={<OrderPlaced />}></Route>
+                        <Route path={'/forgotpassword'} element={<Pwd />}></Route>
+                        <Route path={'/dashboard'} element={<DASHBOARD/>}></Route>
+                        
                     </Routes>
                 </AppbarStatic>
             </BrowserRouter>

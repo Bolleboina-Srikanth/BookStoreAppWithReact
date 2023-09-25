@@ -17,6 +17,7 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import AccountIcon from '@mui/icons-material/PermIdentityOutlined';
 import CartIcon from '@mui/icons-material/ShoppingCartOutlined';
+import { useNavigate } from 'react-router-dom';
 
 import './Header.css';
 import BookImage from '../Components/Images/BookImage.jpg';
@@ -63,7 +64,22 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     },
 }));
 
+
+
 export default function HeaderBar() {
+    const navigate= useNavigate();
+    const handlelogout=()=>{
+        if(localStorage.key)
+        {
+          localStorage.removeItem("token")
+        }
+        navigate('/');
+        }
+
+        const handlecart=()=>{
+            navigate('/cart');
+        }
+
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -105,7 +121,7 @@ export default function HeaderBar() {
             onClose={handleMenuClose}
         >
             <MenuItem onClick={handleMenuClose}>My Profile</MenuItem>
-            <MenuItem onClick={handleMenuClose}>My orders</MenuItem>
+            <MenuItem onClick={handlelogout}>Logout</MenuItem>
         </Menu>
     );
 
@@ -199,30 +215,19 @@ export default function HeaderBar() {
                     </Search>
                     <Box sx={{ flexGrow: 1 }} />
                     <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-                        {/* <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-                            <Badge badgeContent={4} color="error">
-                                <MailIcon />
-                            </Badge>
-                        </IconButton> */}
-                        {/* <IconButton
-                            size="large"
-                            aria-label="show 17 new notifications"
-                            color="inherit"
-                        >
-
-                        </IconButton> */}
+                
                         <IconButton
                             size="large"
                             edge="end"
                             aria-label="account of current user"
                             aria-controls={menuId}
                             aria-haspopup="true"
-                            onClick={handleProfileMenuOpen}
+                            
                             color="inherit"
                         >
                             <div className='details' >
                                 <div className='account'>
-                                    <  AccountIcon className='' ></AccountIcon>
+                                    <  AccountIcon className='' onClick={handleProfileMenuOpen} ></AccountIcon>
                                     <p className='profile' >Profile</p>
                                 </div>
                                 
@@ -233,21 +238,10 @@ export default function HeaderBar() {
                        
                     </Box>
                     <div className='cart1'>
-                                    < CartIcon></CartIcon>
+                                    < CartIcon onClick={handlecart}></CartIcon>
                                     <p className='profile'>cart</p>
                                 </div>
-                    {/* <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
-                        <IconButton
-                            size="large"
-                            aria-label="show more"
-                            aria-controls={mobileMenuId}
-                            aria-haspopup="true"
-                            onClick={handleMobileMenuOpen}
-                            color="inherit"
-                        >
-                            <MoreIcon />
-                        </IconButton>
-                    </Box> */}
+                   
                 </Toolbar>
             </AppBar>
             {renderMobileMenu}

@@ -6,6 +6,7 @@ import './SignIn.css';
 import storeimage from '../../Images/storeimage2.png';
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { signin } from "../../Services/userservices";
 function SignIn() {
     const emailRegex = /^[a-z]{3,}(.[0-9a-z]*)?@([a-z]){2,}.[a-z]+(.in)*$/;
     const passwordRegex = /^.*(?=.{8,})(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&+=]).*$/;
@@ -68,11 +69,18 @@ function SignIn() {
             }));
         }
 
-        console.log(userlogin)
+        
         if(emailTest === true && passwordTest === true)
         {
-            navigate('/bookcard');
+            let response = await signin(userlogin);
+            localStorage.setItem("token",response.data.result.accessToken);
+            console.log(response);
+
+             navigate('/dashboard');
         }
+    }
+    const handlepassword=()=>{
+        navigate('/forgotpassword')
     }
 
 
@@ -95,7 +103,7 @@ function SignIn() {
 
                     <label className="names" for="email">Email id</label>
                     <TextField className="box" id="email" name="email" required value={userlogin.email} onChange={handleInput} error={errorObj.emailError} helperText={errorObj.emailHelper} />
-                    <p id="fpwd">forgot password?</p>
+                    <p id="fpwd" onClick={handlepassword}>forgot password?</p>
 
 
                     <label className="names" for="pwd">Password</label>

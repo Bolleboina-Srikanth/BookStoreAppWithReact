@@ -10,6 +10,7 @@ import CheckBoxOutIcon from '@mui/icons-material/CheckBoxOutlineBlankOutlined';
 import Button from '@mui/material/Button';
 import CustomerDetails from "../CustomerDetails/customerdetails";
 import OrderSummary from "../Order Summary/OrderSummary";
+import BoxIcon from '@mui/icons-material/CheckBoxOutlineBlankSharp';
 
 
 function BookCart() {
@@ -58,19 +59,20 @@ function BookCart() {
                 <p id="cartbysteve">by Steve krug</p>
               </div>
               <div>
-                <span id="cartrupees"><b>Rs.1500</b><s>Rs.2000</s></span>
+                <span id="cartrupees"><b>Rs.1500</b><s>&nbsp;Rs.2000</s></span>
               </div>
-              {/* <div className="carticons">
-                <span> <RemoveCircleIcon /><AddCircleIcon /></span>
-                <div> Remove</div>
-              </div> */}
+              <div className="carticons">
+                <span> <RemoveCircleIcon sx={{color: 'lightgray', width:30 ,height:30}} /> <BoxIcon sx={{color: 'lightgray', width:30 ,height:30}}></BoxIcon> <AddCircleIcon sx={{color: 'lightgray', width:30 ,height:30}}/></span>
+                <div>  &nbsp;  Remove</div>
+              </div>
             </div>
 
           </div>
+          { custDetails ? "": 
           <div className="placeorder">
             <Button onClick={handleorder} id="placeorderbutton" variant="contained">Place order</Button>
           </div>
-
+          }
         </div>
 
         {custDetails ? <CustomerDetails call={CallingOrderSummary} /> :

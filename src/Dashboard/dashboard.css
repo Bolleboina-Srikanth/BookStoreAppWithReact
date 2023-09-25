@@ -1,0 +1,16 @@
+.book-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.book-list-child{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 2vw;
+    width: 90%;
+    height: auto;
+    border: 0px solid;
+    
+}

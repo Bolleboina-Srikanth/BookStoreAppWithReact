@@ -60,7 +60,7 @@ export default function Pwd() {
                         </div>
                     </div>
                     <div className='createaccount'>
-                        <h4>CREATE ACCOUNT</h4>
+                        <h4><Link to='/signup'className='textdecoration'>CREATE ACCOUNT</Link></h4>
                     </div>
                 </Card >
         </div >

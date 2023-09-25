@@ -16,6 +16,7 @@ function App() {
          {/* <OrderPlaced/> */}
          {/* <Dashboard/>   */}
          <BookStoreRouter/>
+         {/* <Dashboard/> */}
     </div>
   );
 }

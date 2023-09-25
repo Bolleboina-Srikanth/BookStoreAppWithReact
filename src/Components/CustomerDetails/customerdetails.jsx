@@ -62,11 +62,11 @@ function CustomerDetails({call}) {
                     </div>
                     
                     
-                        {/* { summary ? <OrderSummary/> : */}
+                         {/* { summary ? "": */}
                             <div className="cd-box-6 cd-box">
                                 <button onClick={handlesummary} className="cd-submit-button" type="submit">CONTINUE</button>
                             </div>
-
+                         
                     
                 </div>
             </div>
