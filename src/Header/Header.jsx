@@ -18,6 +18,8 @@ import MoreIcon from '@mui/icons-material/MoreVert';
 import AccountIcon from '@mui/icons-material/PermIdentityOutlined';
 import CartIcon from '@mui/icons-material/ShoppingCartOutlined';
 import { useNavigate } from 'react-router-dom';
+import { creatingContext } from '../Components/AddToCart/increamentItems';
+import { useContext } from 'react';
 
 import './Header.css';
 import BookImage from '../Components/Images/BookImage.jpg';
@@ -67,6 +69,9 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 
 export default function HeaderBar() {
+
+    const receivedContext = useContext(creatingContext);
+
     const navigate= useNavigate();
     const handlelogout=()=>{
         if(localStorage.key)
@@ -179,7 +184,7 @@ export default function HeaderBar() {
 
     return (
         <Box sx={{ flexGrow: 1 ,height:1}}>
-            <AppBar position="static">
+            <AppBar position="fixed">
                 <Toolbar className='appbar'>
                     {/* <IconButton
                         size="large"
@@ -238,7 +243,9 @@ export default function HeaderBar() {
                        
                     </Box>
                     <div className='cart1'>
-                                    < CartIcon onClick={handlecart}></CartIcon>
+                                    <Badge badgeContent={receivedContext}>
+                                    < CartIcon onClick={handlecart} ></CartIcon>
+                                    </Badge>
                                     <p className='profile'>cart</p>
                                 </div>
                    

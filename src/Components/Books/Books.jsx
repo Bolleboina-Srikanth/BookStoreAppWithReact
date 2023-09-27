@@ -8,11 +8,11 @@ import img1 from '../Images/Image 1.png';
 import '../Books/Books.css';
 import { useNavigate } from 'react-router-dom';
 
-export default function BookCard({ bookdisplay }) {
+export default function BookCard({ bookdisplay, bookdetails,setboolean }) {
     const navigate = useNavigate();
     const handleBook = () => {
-        navigate(`/bookdetails`);
-       // navigate(`/displaybook/${book.id}`);
+       bookdetails(bookdisplay);
+       setboolean(true)
     }
     return (
         <div className="outer-box">
@@ -24,7 +24,6 @@ export default function BookCard({ bookdisplay }) {
                     height: 172,
                     maxheight: 768,
                     height: 300,
-
                 }}>
                     <CardActionArea className='box-container'>
 
@@ -41,11 +40,10 @@ export default function BookCard({ bookdisplay }) {
                                 </p>
                                 <div><br></br>
                                     <span className='star'>4.5 &#9733;</span>
-                                    <span>(20)</span>
+                                    <span>&nbsp;(20)</span>
                                 </div><br></br>
-
                                 <span>
-                                    <b>Rs.{bookdisplay.price}</b><s>Rs.2000</s>
+                                    <b>Rs.{bookdisplay.price}&nbsp;</b><s>Rs.2000</s>
                                 </span>
                             </div>
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import './BookCart.css';
 import LocationIcon from '@mui/icons-material/RoomOutlined';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
@@ -11,6 +11,8 @@ import Button from '@mui/material/Button';
 import CustomerDetails from "../CustomerDetails/customerdetails";
 import OrderSummary from "../Order Summary/OrderSummary";
 import BoxIcon from '@mui/icons-material/CheckBoxOutlineBlankSharp';
+import { creatingContext } from "../AddToCart/increamentItems";
+import { Badge } from "@mui/material";
 
 
 function BookCart() {
@@ -24,6 +26,11 @@ function BookCart() {
     setSummary(add);
 
   }
+
+
+
+  const itemvalueContex = useContext(creatingContext);
+  console.log("item increament :"+itemvalueContex);
 
 
   return (
@@ -62,7 +69,11 @@ function BookCart() {
                 <span id="cartrupees"><b>Rs.1500</b><s>&nbsp;Rs.2000</s></span>
               </div>
               <div className="carticons">
-                <span> <RemoveCircleIcon sx={{color: 'lightgray', width:30 ,height:30}} /> <BoxIcon sx={{color: 'lightgray', width:30 ,height:30}}></BoxIcon> <AddCircleIcon sx={{color: 'lightgray', width:30 ,height:30}}/></span>
+                <span> <RemoveCircleIcon sx={{color: 'lightgray', width:30 ,height:30}} />
+                
+                 <BoxIcon sx={{color: 'lightgray', width:30 ,height:30}}></BoxIcon>
+                
+                  <AddCircleIcon sx={{color: 'lightgray', width:30 ,height:30}}/></span>
                 <div>  &nbsp;  Remove</div>
               </div>
             </div>

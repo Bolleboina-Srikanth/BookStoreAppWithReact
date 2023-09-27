@@ -11,7 +11,7 @@ function OrderPlaced() {
       }
       if(order == true)
       {
-          navigate("/bookcard");
+          navigate("/dashboard");
       }
     
 

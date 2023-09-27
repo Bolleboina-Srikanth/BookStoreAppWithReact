@@ -23,7 +23,7 @@ export default function BookStoreRouter() {
                         <Route exact path={"/"} element={<AuthRoute><SIGNIN /></AuthRoute>} />
                         <Route path={"/signup"} element={<SIGNUP />} />
                         {/* <Route path={"/bookcard"} element={<BOOKCARD />} /> */}
-                        <Route path={'/bookdetails'} element={<DisplayBook />}></Route>
+                        <Route exact path={'/bookdetails'} element={<DisplayBook />}></Route>
                         <Route path="/cart" element={<BookCart />}></Route>
                         <Route path={"/customerdetails"} element={<CustomerDetails />}></Route>
                         <Route path={'/orderplaced'} element={<OrderPlaced />}></Route>
